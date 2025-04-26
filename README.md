@@ -40,6 +40,13 @@ A lightweight **FastAPI** server for hosting the EzyBot backend with **Docker** 
    ```bash
    uvicorn main:app --reload
    ```
+   ---
+   OR
+   ---
+   ```bash
+   python script.py
+   ```
+   
 
 ## 🐳 Running with Docker
 
