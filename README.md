@@ -1,11 +1,14 @@
 # EzyBot Server [![Made with Prisma](http://made-with.prisma.io/indigo.svg)](https://prisma.io)
 
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
 ![Prisma](https://img.shields.io/badge/ORM-Prisma-orange)
 ![Made with ❤️ in Nepal](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20in%20Nepal-purple)
 
 A lightweight **FastAPI** server for hosting the EzyBot backend with **Docker** support.
+
+The main python code for the project is in: [EzyBot](https://github.com/Page-Vishal/ezybot)
 
 ## 🚀 Features
 
