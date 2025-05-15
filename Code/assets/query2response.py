@@ -95,12 +95,15 @@ async def exec_query(code):
     await db.connect()
     where_dict =  ast.literal_eval(query)
     posts = await db.post.find_many(where=where_dict)
-    posts = list(posts)
-    # print(posts)
+    try:
+        posts_list = list(posts)
+    except Exception as e:
+        print(f"Error while converting posts to list: {e}")
+        posts_list = []
 
     list_posts = []
-    if posts:
-        for post in posts:
+    if posts_list:
+        for post in posts_list:
             post = format_post(post)
             list_posts.append(post)
             # for field,value in post.items():

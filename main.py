@@ -1,8 +1,21 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from Code.ezybot import response_from_bot
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "https://ezy-kappa.vercel.app",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,            # or ["*"] for public dev access
+    allow_credentials=True,
+    allow_methods=["*"],              # or restrict to ["GET", "POST"]
+    allow_headers=["*"],
+)
 
 class queryRequest(BaseModel):
     query: str
